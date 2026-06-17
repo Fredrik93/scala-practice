@@ -1,8 +1,7 @@
 @main def mainymain(): Unit =
-  println(multiply(2,2))
-  println(isEven(2))
-  println(isEven(3))
+  val res = makeEmail("fredu2", "gmail.com")
+  val res2 =  makeEmail(domain = "gmail.com", userName="fredu")
+  println(res)
+  println(res2)
 
-def multiply (x: Int, y: Int): Int = x * y
-
-def isEven(x: Int): Boolean = if x % 2 == 0 then true else false 
+def makeEmail(userName: String, domain: String): String = s"$userName@$domain" 
