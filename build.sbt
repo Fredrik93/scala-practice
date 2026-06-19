@@ -7,6 +7,7 @@ lazy val root = project
     version := "0.1.0-SNAPSHOT",
 
     scalaVersion := scala3Version,
+   // scalacOptions += "-explain",
 
     libraryDependencies += "org.scalameta" %% "munit" % "1.3.2" % Test
   )
