@@ -1,5 +1,4 @@
 @main def mainymainy(): Unit =
-  val nums = (1 to 5).toList
-  println(nums)
-  val res = sumOfSquares(nums)
+
+  val res = concatenate("hi", "how", "are", "you")
   println(res)
