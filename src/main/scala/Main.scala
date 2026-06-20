@@ -1,3 +1,5 @@
 @main def mainymainy(): Unit =
-  val res = recursiveFactorial(400000)
+  val nums = (1 to 5).toList
+  println(nums)
+  val res = sumOfSquares(nums)
   println(res)

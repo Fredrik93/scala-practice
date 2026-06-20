@@ -14,7 +14,7 @@ Its warning us because if it is not tail recursive it will throw an exception
 stackoverflow error whenever too many frames are pushed to the stack. 
 tail recursive method reuses the same frame instead of stacking thousands on top of each other
 */ 
-@tailrec
+
 def recursiveFactorial (n: Int): Int = 
     if n <= 1 then 1
     else 
