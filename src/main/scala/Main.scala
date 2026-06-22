@@ -1,4 +1,4 @@
 @main def mainymainy(): Unit =
-
-  val car = new Car("Bmw", "E285")
-  println(s"make: ${car.make} and model: ${car.model}")
+  val nums = Array(1,2,3)
+  val res = Solution.concatWithReverse(nums)
+  println(res.mkString(", "))
