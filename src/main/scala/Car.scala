@@ -1,0 +1,1 @@
+class Car (val make: String,val model: String)

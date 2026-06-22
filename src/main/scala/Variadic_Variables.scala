@@ -1,2 +1,2 @@
-    def concatenate(words :String*): String = 
-        words.mkString(" ")
+def concatenate(words :String*): String = 
+    words.mkString(" ")
