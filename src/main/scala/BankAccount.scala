@@ -6,8 +6,8 @@ class BankAccount(val ownerName: String, var balance: Int):
             balance += amountToDeposit
             balance
         else 
-        println(s"Deposit amount cant be negative or 0, amount tried was ${amountToDeposit}")
-        balance
+            println(s"Deposit amount cant be negative or 0, amount tried was ${amountToDeposit}")
+            balance
     
 
 object BankAccount:
