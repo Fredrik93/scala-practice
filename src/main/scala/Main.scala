@@ -1,7 +1,4 @@
-@main def mainymainy(): Unit =
-  val account = BankAccount("Fred", 100)
-  println(s"owner: ${account.ownerName}, current balance: ${account.balance}")
-  account.deposit(20)
-  account.deposit(-20)
-  println(s"owner: ${account.ownerName}, current balance: ${account.balance}")
-  
+@main def theMainiestOfMainMethods(): Unit =
+  val list = Array(124,22,33,111)
+  val res = minElementAsAPipeline(list)
+  println(res)
