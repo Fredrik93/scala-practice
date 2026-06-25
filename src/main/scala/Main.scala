@@ -1,4 +1,5 @@
 @main def theMainiestOfMainMethods(): Unit =
-  val list = Array(124,22,33,111)
-  val res = minElementAsAPipeline(list)
-  println(res)
+  val circle = Circle(4)
+  println(s"area is : ${area(circle)}")
+  val rectangle = Rectangle(2,2)
+  println(s"area of rectangle is : ${area(rectangle)}")
