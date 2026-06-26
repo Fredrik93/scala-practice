@@ -1,11 +1,18 @@
-case class Circle(radius: Double)
+trait Shape:
+  def area: Double
 
-case class Rectangle ( height: Double, width: Double)
+  def perimeter: Double
+
+trait Describable:
+  def describe: String = "I am a Shape"
+
+case class Circle(radius: Double) extends Shape with Describable:
+  def area: Double = math.Pi * radius * radius
+
+  def perimeter: Double = 2 * math.Pi * radius
 
 
+case class Rectangle(height: Double, width: Double) extends Shape:
+  def area: Double = height * width
 
-def area (shape: Any): Double =
-  shape match
-    case Circle(r) => math.Pi * r * r
-    case Rectangle(height, width) => height * width
-    case _ => 0.0
+  def perimeter: Double = 2 * (height + width)
