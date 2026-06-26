@@ -1,5 +1,7 @@
 @main def theMainiestOfMainMethods(): Unit =
   val r = Rectangle(2,2)
  
-  val c = Circle(5)
-  println(c.describe)
+  val n = Timeout("timeout")
+  println(checkError(n))
+  println(checkError(NotFound("fanns ej")))
+  println(checkError(ServerError("serveeer")))
