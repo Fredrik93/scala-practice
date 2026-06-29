@@ -1,9 +1,8 @@
 @main def theMainiestOfMainMethods(): Unit =
-  val s1 = NonEmptyValidator()
-  val s2 = LengthValidator()
-  
-  println(s1.validate("hi"))
-  println(s2.validate("hiiiiiiii"))
-  
-  println(s1.validate(" "))
-  println(s2.validate("hi"))
+  val trains = List(ShortTrain, LongTrain, Commuter, TGV("tgv"))
+
+  val speeds = trains.map(_.maxSpeed)
+
+  val summedMaxSpeed = trains.map(n=> n.maxSpeed).sum
+  println(s"sum of max speed: ${summedMaxSpeed}")
+  println(speeds)
