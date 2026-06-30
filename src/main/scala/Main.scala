@@ -1,7 +1,5 @@
 @main def theMainiestOfMainMethods(): Unit =
-  val trains = List(ShortTrain, LongTrain, Commuter, TGV("tgv"))
+  val vehicles = List(Car(brand = "Tesla", amountOfDoors = 5, fuelType =  "Electricity"), Moped)
 
-  val a1 = FurAnimal(3)
-  val a2 = AnAnimal(0)
-  println(a1.sound)
-  println(a2.sound)
+    vehicles.foreach(n => println(n.describe))
+
