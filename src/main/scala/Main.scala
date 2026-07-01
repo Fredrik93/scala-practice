@@ -1,5 +1,7 @@
 @main def theMainiestOfMainMethods(): Unit =
-  val vehicles = List(Car(brand = "Tesla", amountOfDoors = 5), Moped)
-
-    vehicles.foreach(n => println(n.describe))
+  val summer = Season.SUMMER.describe();
+  val autum = Season.AUTUMN.describe();
+  val spring = Season.SPRING.describe();
+  val winter = Season.WINTER.describe()
+  println(s"$summer $autum $spring $winter")
 
