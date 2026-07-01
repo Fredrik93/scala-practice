@@ -1,7 +1,6 @@
 @main def theMainiestOfMainMethods(): Unit =
-  val summer = Season.SUMMER.describe();
-  val autum = Season.AUTUMN.describe();
-  val spring = Season.SPRING.describe();
-  val winter = Season.WINTER.describe()
-  println(s"$summer $autum $spring $winter")
+  val red = Color.RED.rgb
+  val blue = Color.BLUE
+  val green = Color.GREEN
+  println(s"${red} ${blue.describe} ${green.describe}")
 
