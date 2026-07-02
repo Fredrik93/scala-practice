@@ -1,6 +1,7 @@
-@main def theMainiestOfMainMethods(): Unit =
-  val red = Color.RED.rgb
-  val blue = Color.BLUE
-  val green = Color.GREEN
-  println(s"${red} ${blue.describe} ${green.describe}")
+import functional.CalcNumbers
 
+@main def theMainiestOfMainMethods(): Unit =
+  println(CalcNumbers.squared(23))
+  println(CalcNumbers.isEmpty(""))
+  println(CalcNumbers.isEmpty("helloo"))
+  println(CalcNumbers.concatenate("micho", "macho"))

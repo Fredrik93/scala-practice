@@ -1,10 +1,9 @@
-sealed trait NetworkError
-def checkError(ne: NetworkError): String =
-  ne match
-    case Timeout(msg) => s"error: ${msg}"
-    case NotFound(msg) => s"error: ${msg}"
-    case ServerError(msg) => s"error: ${msg}"
-
-case class Timeout(message: String) extends NetworkError
-case class NotFound (message: String) extends NetworkError
-case class ServerError (message: String) extends NetworkError
+  enum Network(msg: String):
+    case TIMEOUT extends Network("timeout")
+    case NOTFOUND extends Network("notfound")
+    case SERVERERROR extends Network("server")
+    def checkError: String =
+      this match
+        case TIMEOUT => s"$msg error occured"
+        case NOTFOUND => s"$msg error occured"
+        case SERVERERROR => s"$msg error occured"
