@@ -8,6 +8,6 @@ object CalcNumbers:
   def triple(x: Int): Int = x * 3
   val tripleVal: Int => Int = x => x * 3
 
-  def applyToAll(list: List[Int]): Int = -12
+  def applyToAll(list: List[Int], f: Int => Int): List[Int] = for x <- list yield f(x)
 
 
