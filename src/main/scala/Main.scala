@@ -1,7 +1,9 @@
 import functional.CalcNumbers
 
 @main def theMainiestOfMainMethods(): Unit = {
-  val doubleTheValue: Int => Int = x => x * 2
-  val doubled = CalcNumbers.applyToAll(List(1,2,3,4), doubleTheValue)
-  doubled.foreach(p =>  println(s" value: $p"))
+  val multiplyByDouble = CalcNumbers.multiply(2, _)
+  val multiplyByTriple = CalcNumbers.multiply(3, _)
+  println(s"double: ${multiplyByDouble(5)}")
+  print(s"triple ${multiplyByTriple(5)}")
+
 }
