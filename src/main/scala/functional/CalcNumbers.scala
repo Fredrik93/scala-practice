@@ -28,8 +28,11 @@ object CalcNumbers:
     println("******")
     println(removedOne("Sweden"))
     println(removedOne.get("Japan"))
-    
+
   def uppercase(l: List[String]): List[String] =
     l.map(_.toUpperCase)
+
+  def convertToString(list: List[Int]): List[String] =
+    list.map( s => s"Number: ${s}")
 
 
