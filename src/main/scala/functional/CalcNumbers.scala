@@ -13,3 +13,20 @@ object CalcNumbers:
 
 
   def multiply(x: Int) (y: Int): Int = x * y
+
+  def countries(): Unit =
+    val countries = Map("Spain" -> "Barcelona", "Netherlands" -> "Amsterdam", "South africa" -> "Johannesburg")
+    countries.foreach((name, capital) => println(s"$name - $capital"))
+    println("\n")
+
+    val addedFourth = countries + ("Sweden" -> "Stockholm")
+    addedFourth.foreach((name, capital) => println(s"$name - $capital"))
+    println("\n")
+    val removedOne = addedFourth- "Spain"
+    removedOne.foreach((name, capital) => println(s"$name - $capital"))
+
+    println("******")
+    println(removedOne.get("Sweden"))
+    println(removedOne.get("Japan"))
+
+
