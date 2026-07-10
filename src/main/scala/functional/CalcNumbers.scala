@@ -26,7 +26,10 @@ object CalcNumbers:
     removedOne.foreach((name, capital) => println(s"$name - $capital"))
 
     println("******")
-    println(removedOne.get("Sweden"))
+    println(removedOne("Sweden"))
     println(removedOne.get("Japan"))
+    
+  def uppercase(l: List[String]): List[String] =
+    l.map(_.toUpperCase)
 
 

@@ -1,7 +1,8 @@
 import functional.CalcNumbers
 
 @main def theMainiestOfMainMethods(): Unit = {
-  CalcNumbers.countries()
+  val upperClist = CalcNumbers.uppercase(List("hi", "HELlo", "Jnarthyn"))
+  println(upperClist)
 
   
 
