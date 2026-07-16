@@ -5,6 +5,8 @@ object CalcNumbers:
   val isEmpty: String => Boolean = (s: String) => s.isEmpty
   val concatenate: (String, String) => String = (s: String, s2: String) => s + " " + s2
   val tripleVal: Int => Int = x => x * 3
+  
+  def tryFind(list: List[Int]): Option[Int] = list.find(n => n > 10)
 
   def usePartitionToSeparateNumbersGreaterThan10(list: List[Int]): (List[Int], List[Int]) =
     val (greaterThan, lowerThan) = list.partition(n => n > 10)

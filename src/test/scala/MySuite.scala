@@ -4,6 +4,12 @@ import org.scalatest.matchers.should.Matchers
 
 class MySuite extends AnyFunSuite with Matchers:
 
+  test("find number"):
+    val list = List(1,2,3,3)
+    val res = CalcNumbers.tryFind(list)
+    res should be (Some(13))
+
+
   test("partition stuff"):
     val list = List(1, 2, 3, 30, 20, 10)
     val res = CalcNumbers.usePartitionToSeparateNumbersGreaterThan10(list)
