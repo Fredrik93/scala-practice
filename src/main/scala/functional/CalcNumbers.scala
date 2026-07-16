@@ -8,6 +8,13 @@ object CalcNumbers:
 
   def applyToAll(list: List[Int], f: Int => Int): List[Int] = for x <- list yield f(x)
 
+  def getNumbersGreaterThanTen(l: List[Int]): List[Int] = {
+    l.filter(n => n > 10)
+  }
+  
+  def getStringsNotStartingWithA(l: List[String]): List[String] =
+    l.filterNot(s => s.startsWith("a"))
+
   def flattenStrings(list: List[String]): List[String] =
     list.flatMap(_.split(" "))
 
