@@ -4,10 +4,21 @@ import org.scalatest.matchers.should.Matchers
 
 class MySuite extends AnyFunSuite with Matchers:
 
+  test("group strings by length"):
+    val l = List("some", "alla", "hi", "fd", "dfsdfewfewfw")
+    val res = CalcNumbers.groupStringsByLength(l)
+    res should be (Map(2 -> List("hi", "fd"), 12 -> List("dfsdfewfewfw"), 4 -> List("some", "alla")))
+
+  test("zip product and prices"):
+    val products = List("Apple", "IBM", "Dell Xps")
+    val prices = List(14000, 10000, 40000000, 30)
+    val result = CalcNumbers.zipProductsAndTheirPrices(products, prices)
+    result should be(List(("Apple", 14000.0), ("IBM", 10000.0), ("Dell Xps", 40000000.0)))
+
   test("double all ints, throw away strings"):
-    val input = List(1,2,"hi", 3, "4")
+    val input = List(1, 2, "hi", 3, "4")
     val result = CalcNumbers.doubleAllInts(input)
-    result should be (List(2,4,6))
+    result should be(List(2, 4, 6))
 
   test("String length greater than 3"):
     val input = List("hello", "foo", "adapter")
