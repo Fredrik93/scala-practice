@@ -4,10 +4,15 @@ import org.scalatest.matchers.should.Matchers
 
 class MySuite extends AnyFunSuite with Matchers:
 
+  test("partition stuff"):
+    val list = List(1, 2, 3, 30, 20, 10)
+    val res = CalcNumbers.usePartitionToSeparateNumbersGreaterThan10(list)
+    res should be((List(30, 20), List(1, 2, 3, 10)))
+
   test("group strings by length"):
     val l = List("some", "alla", "hi", "fd", "dfsdfewfewfw")
     val res = CalcNumbers.groupStringsByLength(l)
-    res should be (Map(2 -> List("hi", "fd"), 12 -> List("dfsdfewfewfw"), 4 -> List("some", "alla")))
+    res should be(Map(2 -> List("hi", "fd"), 12 -> List("dfsdfewfewfw"), 4 -> List("some", "alla")))
 
   test("zip product and prices"):
     val products = List("Apple", "IBM", "Dell Xps")

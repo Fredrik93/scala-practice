@@ -6,9 +6,13 @@ object CalcNumbers:
   val concatenate: (String, String) => String = (s: String, s2: String) => s + " " + s2
   val tripleVal: Int => Int = x => x * 3
 
-  def groupStringsByLength (l: List[String]): Map[Int, List[String]] =
+  def usePartitionToSeparateNumbersGreaterThan10(list: List[Int]): (List[Int], List[Int]) =
+    val (greaterThan, lowerThan) = list.partition(n => n > 10)
+    (greaterThan, lowerThan)
+
+  def groupStringsByLength(l: List[String]): Map[Int, List[String]] =
     l.groupBy(s => s.length)
-    
+
   def zipProductsAndTheirPrices(product: List[String], prices: List[Int]): List[(String, Int)] =
     product.zip(prices)
 
@@ -18,7 +22,9 @@ object CalcNumbers:
 
   def stringWithLengthGreaterThanThree(l: List[String]): Int =
     l.foldLeft(0)((acc, s) => if s.length > 3 then acc + 1 else acc)
-
+  
+  // suppress warning because it wants to use .sum but this is for practice 
+  //noinspection SimplifiableFoldOrReduce
   def sumAllInts(l: List[Int]): Int = l.foldLeft(0)((acc, n) => acc + n)
 
   def findMaxValUsingFold(l: List[Int]): Int = l.foldLeft(0)((acc, n) => if n > acc then n else acc)
@@ -57,6 +63,6 @@ object CalcNumbers:
     l.map(_.toUpperCase)
 
   def convertToString(list: List[Int]): List[String] =
-    list.map(s => s"Number: ${s}")
+    list.map(s => s"Number: $s")
 
 
