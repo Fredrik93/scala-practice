@@ -2,7 +2,7 @@ import functional.CalcNumbers
 import org.scalatest.funsuite.AnyFunSuite
 import org.scalatest.matchers.should.Matchers
 
-class MySuite extends AnyFunSuite with Matchers:
+class CalcNumbers extends AnyFunSuite with Matchers:
 
   test("find number"):
     val list = List(1, 13, 2, 3, 3)
