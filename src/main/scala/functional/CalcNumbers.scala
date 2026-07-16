@@ -8,6 +8,9 @@ object CalcNumbers:
 
   def applyToAll(list: List[Int], f: Int => Int): List[Int] = for x <- list yield f(x)
 
+  def flattenStrings(list: List[String]): List[String] =
+    list.flatMap(_.split(" "))
+
   def adder(amountToAdd: Int): Int => Int =
     x => x + amountToAdd
 
