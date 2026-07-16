@@ -22,8 +22,8 @@ object CalcNumbers:
 
   def stringWithLengthGreaterThanThree(l: List[String]): Int =
     l.foldLeft(0)((acc, s) => if s.length > 3 then acc + 1 else acc)
-  
-  // suppress warning because it wants to use .sum but this is for practice 
+
+  // suppress warning because it wants to use .sum but this is for practice
   //noinspection SimplifiableFoldOrReduce
   def sumAllInts(l: List[Int]): Int = l.foldLeft(0)((acc, n) => acc + n)
 
