@@ -5,9 +5,19 @@ import org.scalatest.matchers.should.Matchers
 class MySuite extends AnyFunSuite with Matchers:
 
   test("find number"):
-    val list = List(1,2,3,3)
+    val list = List(1, 13, 2, 3, 3)
     val res = CalcNumbers.tryFind(list)
-    res should be (Some(13))
+    res should be(Some(13))
+
+  test("check if number exist"):
+    val list = List(1, 13, 2, 3, 3)
+    val res = CalcNumbers.tryExist(list)
+    res should be (true)
+
+  test("check forall"):
+    val list = List(1, 13, 2, 3, 3)
+    val res = CalcNumbers.tryFind(list)
+    res should be(Some(13))
 
 
   test("partition stuff"):
