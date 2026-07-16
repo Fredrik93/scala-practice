@@ -6,6 +6,9 @@ object CalcNumbers:
   val concatenate: (String, String) => String = (s: String, s2: String) => s + " " + s2
   val tripleVal: Int => Int = x => x * 3
 
+  def doubleAllInts(l: List[Any]): List[Int] =
+    l.collect:
+      case n: Int => n * 2
 
   def stringWithLengthGreaterThanThree(l: List[String]): Int =
     l.foldLeft(0)((acc, s) => if s.length > 3 then acc+1 else acc)

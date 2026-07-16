@@ -3,12 +3,18 @@ import org.scalatest.funsuite.AnyFunSuite
 import org.scalatest.matchers.should.Matchers
 
 class MySuite extends AnyFunSuite with Matchers:
+
+  test("double all ints, throw away strings"):
+    val input = List(1,2,"hi", 3, "4")
+    val result = CalcNumbers.doubleAllInts(input)
+    result should be (List(2,4,6))
+
   test("String length greater than 3"):
     val input = List("hello", "foo", "adapter")
     val result = CalcNumbers.stringWithLengthGreaterThanThree(input)
     result should be(2)
 
-  
+
   test("sum all ints"):
     val input = List(1, 2, 3, 4, 5)
     val result = CalcNumbers.sumAllInts(input)
