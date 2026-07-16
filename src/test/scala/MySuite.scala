@@ -3,11 +3,26 @@ import org.scalatest.funsuite.AnyFunSuite
 import org.scalatest.matchers.should.Matchers
 
 class MySuite extends AnyFunSuite with Matchers:
+  test("String length greater than 3"):
+    val input = List("hello", "foo", "adapter")
+    val result = CalcNumbers.stringWithLengthGreaterThanThree(input)
+    result should be(2)
+
+  
+  test("sum all ints"):
+    val input = List(1, 2, 3, 4, 5)
+    val result = CalcNumbers.sumAllInts(input)
+    result should be(15)
+
+  test("get max int"):
+    val input = List(1, 2, 9, 3, 4, 5)
+    val result = CalcNumbers.findMaxValUsingFold(input)
+    result should be(9)
 
   test("Numbers in list greater than 10 "):
-    val input =  List(1,2,3,4,10,11,12)
+    val input = List(1, 2, 3, 4, 10, 11, 12)
     val result = CalcNumbers.getNumbersGreaterThanTen(input)
-    result should be (List(11,12))
+    result should be(List(11, 12))
 
   test("String not starting with a"):
     val input = List("hello", "foo", "adapter")

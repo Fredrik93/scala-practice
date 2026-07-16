@@ -6,17 +6,22 @@ object CalcNumbers:
   val concatenate: (String, String) => String = (s: String, s2: String) => s + " " + s2
   val tripleVal: Int => Int = x => x * 3
 
+
+  def stringWithLengthGreaterThanThree(l: List[String]): Int =
+    l.foldLeft(0)((acc, s) => if s.length > 3 then acc+1 else acc)
+
+  def sumAllInts (l: List[Int]): Int = l.foldLeft(0)((acc, n) => acc + n)
+  def findMaxValUsingFold(l: List[Int]): Int = l.foldLeft(0)((acc, n) => if n > acc then n else acc)
+
   def applyToAll(list: List[Int], f: Int => Int): List[Int] = for x <- list yield f(x)
 
-  def getNumbersGreaterThanTen(l: List[Int]): List[Int] = {
-    l.filter(n => n > 10)
-  }
+  def getNumbersGreaterThanTen(l: List[Int]): List[Int] = l.filter(n => n > 10)
   
-  def getStringsNotStartingWithA(l: List[String]): List[String] =
-    l.filterNot(s => s.startsWith("a"))
+  def getStringsNotStartingWithA(l: List[String]): List[String] = l.filterNot(s => s.startsWith("a"))
 
-  def flattenStrings(list: List[String]): List[String] =
-    list.flatMap(_.split(" "))
+  def flattenStrings(list: List[String]): List[String] = list.flatMap(_.split(" "))
+
+
 
   def adder(amountToAdd: Int): Int => Int =
     x => x + amountToAdd
