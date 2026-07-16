@@ -12,13 +12,18 @@ class MySuite extends AnyFunSuite with Matchers:
   test("check if number exist"):
     val list = List(1, 13, 2, 3, 3)
     val res = CalcNumbers.tryExist(list)
-    res should be (true)
+    res should be(true)
 
-  test("check forall"):
+  test("for all should be true"):
+    val list = List(2, 13, 2, 3, 3)
+    val res = CalcNumbers.tryForAll(list)
+    res should be(true)
+
+
+  test("for all should be false"):
     val list = List(1, 13, 2, 3, 3)
-    val res = CalcNumbers.tryFind(list)
-    res should be(Some(13))
-
+    val res = CalcNumbers.tryForAll(list)
+    res should be(false)
 
   test("partition stuff"):
     val list = List(1, 2, 3, 30, 20, 10)

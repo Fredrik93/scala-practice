@@ -9,6 +9,8 @@ object CalcNumbers:
   def tryFind(list: List[Int]): Option[Int] = list.find(n => n > 10)
   
   def tryExist(list: List[Int]): Boolean = list.exists(n => n > 10)
+  
+  def tryForAll(list: List[Int]): Boolean = list.forall( n => n >= 2)
 
   def usePartitionToSeparateNumbersGreaterThan10(list: List[Int]): (List[Int], List[Int]) =
     val (greaterThan, lowerThan) = list.partition(n => n > 10)
