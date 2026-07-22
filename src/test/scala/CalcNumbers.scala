@@ -4,6 +4,27 @@ import org.scalatest.matchers.should.Matchers
 
 class CalcNumbers extends AnyFunSuite with Matchers:
 
+
+  test("sort with: Ints in descending order ") {
+    val list = List(1,2,3,4,45,55,12,32)
+    val res = CalcNumbers.sortListWith(list)
+    res should be (List(55,45,32,12,4,3,2,1))
+  }
+  test("sort by last character in string ") {
+    val list = List("Apa", "Banan", "Donkeyb")
+    val res = CalcNumbers.sortListBy(list)
+    res should be (List("Apa","Donkeyb", "Banan"))
+  }
+  test("sort by in string ") {
+    val list = List("Apa", "Banan", "Donkeyb")
+    val res = CalcNumbers.sortBy(list)
+    res should be(List("Apa", "Donkeyb", "Banan"))
+  }
+  test("get distinct values") {
+    val list =  List (1,1,1,2,2,34,34,3,2,5,4)
+    val res = CalcNumbers.getDistinct(list)
+    res should be (List(1,2,34,3,5,4))
+  }
   test ("get 3 first pages from page 0 "){
     val list = List(1,2,3,4,5,6,7,8,9,10,11)
     val res = CalcNumbers.getPage(list, 0, 3)

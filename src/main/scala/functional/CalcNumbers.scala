@@ -5,10 +5,19 @@ object CalcNumbers:
   val isEmpty: String => Boolean = (s: String) => s.isEmpty
   val concatenate: (String, String) => String = (s: String, s2: String) => s + " " + s2
   val tripleVal: Int => Int = x => x * 3
+  
+  def getDistinct (list: List[Int]): List[Int] = list.distinct
+
+  def sortListBy(list: List[String]): List[String] =
+    list.sortBy(_.last)
+
+  def sortListWith(list: List[Int]): List[Int] = list.sortWith((a, b) => a > b)
+
+  val sortBy: List[String] => List[String] = l => l.sortBy(_.last)
 
   def getPage(list: List[Int], page: Int, pageSize: Int): List[Int] =
     list.slice(page * pageSize, (page + 1) * pageSize)
-  
+
   def tryFind(list: List[Int]): Option[Int] = list.find(n => n > 10)
   
   def tryExist(list: List[Int]): Boolean = list.exists(n => n > 10)
