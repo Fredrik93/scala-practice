@@ -4,6 +4,17 @@ import org.scalatest.matchers.should.Matchers
 
 class CalcNumbers extends AnyFunSuite with Matchers:
 
+  test ("get 3 first pages from page 0 "){
+    val list = List(1,2,3,4,5,6,7,8,9,10,11)
+    val res = CalcNumbers.getPage(list, 0, 3)
+    res should be (List(1,2,3))
+  }
+  test("get 2 first pages from page 4 ") {
+    val list = List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+    val res = CalcNumbers.getPage(list, 4, 2)
+    res should be(List(9, 10))
+  }
+
   test("find number"):
     val list = List(1, 13, 2, 3, 3)
     val res = CalcNumbers.tryFind(list)

@@ -5,6 +5,9 @@ object CalcNumbers:
   val isEmpty: String => Boolean = (s: String) => s.isEmpty
   val concatenate: (String, String) => String = (s: String, s2: String) => s + " " + s2
   val tripleVal: Int => Int = x => x * 3
+
+  def getPage(list: List[Int], page: Int, pageSize: Int): List[Int] =
+    list.slice(page * pageSize, (page + 1) * pageSize)
   
   def tryFind(list: List[Int]): Option[Int] = list.find(n => n > 10)
   
