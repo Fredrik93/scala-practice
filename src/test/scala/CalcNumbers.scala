@@ -4,6 +4,11 @@ import org.scalatest.matchers.should.Matchers
 
 class CalcNumbers extends AnyFunSuite with Matchers:
 
+  test("list of strings") {
+    val list = List("hi","Cykel", "Apa", "Apan", "Donkey")
+    val res = CalcNumbers.fixUpStrings(list)
+    res should be (List("APAN", "CYKEL", "DONKEY"))
+  }
 
   test("sort with: Ints in descending order ") {
     val list = List(1,2,3,4,45,55,12,32)
